@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f0f2f6">
+  <meta name="description" content="MicroTurtles — конструктор устройств и сценариев умного здания с эмуляцией и интеграцией Ujin OS.">
+  <title>MicroTurtles · Пространство автоматизации</title>
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/style.css?v=3.4.0">
+  <link rel="stylesheet" href="/static/microturtles.css?v=3.4.0">
+  <script defer src="/static/app.js?v=3.4.0"></script>
+  <script defer src="/static/microturtles.js?v=3.4.0"></script>
+  <script defer src="/static/operations.js?v=3.4.0"></script>
+  <script defer src="/static/scenario-ui.js?v=3.4.0"></script>
+  <script defer src="/static/device-ui.js?v=3.4.0"></script>
+  <style>[hidden]{display:none!important}</style>
+</head>
+<body>
+  <section id="auth-root" class="auth-screen"><div class="loading"><span class="loader"></span>Загружаем MicroTurtles…</div></section>
+  <aside class="sidebar app-surface" hidden>
+    <a class="brand" href="/#overview" onclick="goHome(event)" aria-label="MicroTurtles — главная"><span class="brand-mark">m</span><span class="brand-word">MicroTurtles<span class="brand-sub">SMART LIVING</span></span></a>
+    <div class="workspace-label">ВАШ ОБЪЕКТ</div>
+    <button class="workspace" id="workspace-button" onclick="openLocation()" title="Выбрать объект"><span class="workspace-icon" data-icon="building"></span><span><strong id="workspace-title">Адрес не указан</strong><small id="workspace-subtitle">Объект пользователя</small></span></button>
+    <nav aria-label="Разделы продукта">
+      <a href="#overview" data-page="overview"><span data-icon="grid"></span>Обзор<span class="nav-badge">01</span></a>
+      <a href="#devices" data-page="devices"><span data-icon="devices"></span>Устройства<span id="nav-device-count" class="nav-badge">9</span></a>
+      <a href="#scenarios" data-page="scenarios"><span data-icon="workflow"></span>Сценарии</a>
+      <a href="#emulators" data-admin-only data-page="emulators"><span data-icon="sliders"></span>Эмуляторы<span class="mini-dot"></span></a>
+      <a href="#journal" data-admin-only data-page="journal"><span data-icon="list"></span>Журнал событий</a>
+      <a href="#integration" data-admin-only data-page="integration"><span data-icon="link"></span>Интеграция Ujin</a>
+      <a href="#incidents" data-admin-only data-page="incidents"><span data-icon="warning"></span>Проблемы и инциденты</a>
+      <a href="#meters" data-page="meters"><span data-icon="meter"></span>Счётчики</a>
+      <a href="#common" data-admin-only data-page="common"><span data-icon="building"></span>Общие зоны</a>
+      <a href="#tickets" data-admin-only data-page="tickets"><span data-icon="user"></span>Заявки специалистам</a>
+      <a href="#market" data-page="market"><span data-icon="devices"></span>Маркет</a>
+      <a href="#profile" data-page="profile"><span data-icon="user"></span>Профиль</a>
+      <a href="#properties" data-admin-only data-page="properties"><span data-icon="building"></span>Объекты</a>
+      <a href="#users" data-admin-only data-page="users"><span data-icon="user"></span>Пользователи</a>
+    </nav>
+    <div class="sidebar-bottom"><div class="engine-status"><span class="pulse-dot"></span><div><strong id="connection-label">Подключение…</strong><small>Локальный движок сценариев</small></div></div><div class="sidebar-caption">Одна модель. Любое устройство.<span>UJIN OS · AUTOMATION WORKSPACE</span></div></div>
+  </aside>
+  <div class="shell app-surface" hidden>
+    <header class="topbar"><button class="icon-button mobile-menu" aria-label="Открыть меню" id="menu-toggle"><span data-icon="menu"></span></button><div class="breadcrumb">Рабочее пространство <span>/</span> <strong id="breadcrumb-current">Обзор</strong></div><div class="topbar-right"><span class="mode-pill" id="mode-pill"><span class="mini-dot"></span>Демо · локальный режим</span><button class="icon-button notification-button" id="notifications-button" title="Уведомления" aria-label="Открыть уведомления"><span data-icon="bell"></span><i id="notification-count">0</i></button><button class="profile-button" id="profile-button" onclick="openProfile()" aria-label="Личный кабинет"><span class="avatar" id="user-avatar">МТ</span><span class="profile-copy"><strong id="profile-name"></strong><small id="profile-role"></small></span></button></div></header>
+    <main id="main" tabindex="-1"><div class="loading"><span class="loader"></span>Загружаем MicroTurtles…</div></main>
+    <footer>MicroTurtles <span>Единый язык устройств и автоматизаций</span><a data-admin-only href="/api/docs" target="_blank" rel="noopener">API документация ↗</a></footer>
+  </div>
+  <dialog id="editor-dialog"><div id="editor-content"></div></dialog>
+  <div class="toast-region" id="toasts" role="status" aria-live="polite"></div>
+  <div id="connection-banner" hidden>Сервер недоступен. Повторное подключение выполняется автоматически.</div>
+</body>
+</html>

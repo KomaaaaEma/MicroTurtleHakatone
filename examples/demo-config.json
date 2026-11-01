@@ -1,0 +1,1163 @@
+{
+  "schema_version": 1,
+  "devices": [
+    {
+      "id": "leak-1",
+      "name": "Датчик протечки",
+      "kind": "leak",
+      "room": "Ванная",
+      "online": true,
+      "capabilities": [
+        {
+          "key": "leak",
+          "label": "Протечка",
+          "type": "boolean",
+          "role": "event",
+          "unit": "",
+          "min": null,
+          "max": null,
+          "default": false
+        },
+        {
+          "key": "battery",
+          "label": "Батарея",
+          "type": "number",
+          "role": "measurement",
+          "unit": "%",
+          "min": 0.0,
+          "max": 100.0,
+          "default": 98
+        }
+      ],
+      "state": {
+        "leak": false,
+        "battery": 98
+      },
+      "ujin": {
+        "serialnumber": "",
+        "ext_guid": "",
+        "model": "parkcloud_device",
+        "device_class": "integrations_devices",
+        "signal_map": {}
+      },
+      "location": {
+        "building_id": "building-1",
+        "entrance": "1",
+        "apartment": "3007",
+        "floor": null,
+        "scope": "apartment"
+      },
+      "common_access": {
+        "resident_read": true,
+        "resident_commands": []
+      },
+      "meter": null,
+      "last_seen": null,
+      "last_seen_source": null
+    },
+    {
+      "id": "valve-1",
+      "name": "Клапан воды",
+      "kind": "valve",
+      "room": "Ванная",
+      "online": true,
+      "capabilities": [
+        {
+          "key": "closed",
+          "label": "Вода перекрыта",
+          "type": "boolean",
+          "role": "command",
+          "unit": "",
+          "min": null,
+          "max": null,
+          "default": false
+        }
+      ],
+      "state": {
+        "closed": false
+      },
+      "ujin": {
+        "serialnumber": "",
+        "ext_guid": "",
+        "model": "parkcloud_device",
+        "device_class": "integrations_devices",
+        "signal_map": {}
+      },
+      "location": {
+        "building_id": "building-1",
+        "entrance": "1",
+        "apartment": "3007",
+        "floor": null,
+        "scope": "apartment"
+      },
+      "common_access": {
+        "resident_read": true,
+        "resident_commands": []
+      },
+      "meter": null,
+      "last_seen": null,
+      "last_seen_source": null
+    },
+    {
+      "id": "thermostat-1",
+      "name": "Термостат",
+      "kind": "thermostat",
+      "room": "Гостиная",
+      "online": true,
+      "capabilities": [
+        {
+          "key": "temperature",
+          "label": "Температура",
+          "type": "number",
+          "role": "measurement",
+          "unit": "°C",
+          "min": -40.0,
+          "max": 80.0,
+          "default": 23.4
+        },
+        {
+          "key": "humidity",
+          "label": "Влажность",
+          "type": "number",
+          "role": "measurement",
+          "unit": "%",
+          "min": 0.0,
+          "max": 100.0,
+          "default": 45
+        },
+        {
+          "key": "target_temp",
+          "label": "Целевая температура",
+          "type": "number",
+          "role": "property",
+          "unit": "°C",
+          "min": 5.0,
+          "max": 35.0,
+          "default": 22
+        },
+        {
+          "key": "mode",
+          "label": "Режим",
+          "type": "string",
+          "role": "command",
+          "unit": "",
+          "min": null,
+          "max": null,
+          "default": "auto"
+        }
+      ],
+      "state": {
+        "temperature": 23.4,
+        "humidity": 45,
+        "target_temp": 22,
+        "mode": "auto"
+      },
+      "ujin": {
+        "serialnumber": "",
+        "ext_guid": "",
+        "model": "parkcloud_device",
+        "device_class": "integrations_devices",
+        "signal_map": {}
+      },
+      "location": {
+        "building_id": "building-1",
+        "entrance": "1",
+        "apartment": "3007",
+        "floor": null,
+        "scope": "apartment"
+      },
+      "common_access": {
+        "resident_read": true,
+        "resident_commands": []
+      },
+      "meter": null,
+      "last_seen": null,
+      "last_seen_source": null
+    },
+    {
+      "id": "light-1",
+      "name": "Умный свет",
+      "kind": "light",
+      "room": "Прихожая",
+      "online": true,
+      "capabilities": [
+        {
+          "key": "power",
+          "label": "Питание",
+          "type": "boolean",
+          "role": "command",
+          "unit": "",
+          "min": null,
+          "max": null,
+          "default": true
+        },
+        {
+          "key": "brightness",
+          "label": "Яркость",
+          "type": "number",
+          "role": "property",
+          "unit": "%",
+          "min": 0.0,
+          "max": 100.0,
+          "default": 75
+        }
+      ],
+      "state": {
+        "power": true,
+        "brightness": 75
+      },
+      "ujin": {
+        "serialnumber": "",
+        "ext_guid": "",
+        "model": "parkcloud_device",
+        "device_class": "integrations_devices",
+        "signal_map": {}
+      },
+      "location": {
+        "building_id": "building-1",
+        "entrance": "1",
+        "apartment": "3007",
+        "floor": null,
+        "scope": "apartment"
+      },
+      "common_access": {
+        "resident_read": true,
+        "resident_commands": []
+      },
+      "meter": null,
+      "last_seen": null,
+      "last_seen_source": null
+    },
+    {
+      "id": "barrier-1",
+      "name": "Шлагбаум",
+      "kind": "barrier",
+      "room": "Паркинг",
+      "online": true,
+      "capabilities": [
+        {
+          "key": "open",
+          "label": "Открыт",
+          "type": "boolean",
+          "role": "command",
+          "unit": "",
+          "min": null,
+          "max": null,
+          "default": false
+        },
+        {
+          "key": "obstacle",
+          "label": "Препятствие",
+          "type": "boolean",
+          "role": "event",
+          "unit": "",
+          "min": null,
+          "max": null,
+          "default": false
+        }
+      ],
+      "state": {
+        "open": false,
+        "obstacle": false
+      },
+      "ujin": {
+        "serialnumber": "",
+        "ext_guid": "",
+        "model": "parkcloud_device",
+        "device_class": "integrations_devices",
+        "signal_map": {}
+      },
+      "location": {
+        "building_id": "building-1",
+        "entrance": "",
+        "apartment": "",
+        "floor": null,
+        "scope": "common"
+      },
+      "common_access": {
+        "resident_read": true,
+        "resident_commands": [
+          "open"
+        ]
+      },
+      "meter": null,
+      "last_seen": null,
+      "last_seen_source": null
+    },
+    {
+      "id": "meter-1",
+      "name": "Счётчик воды",
+      "kind": "meter",
+      "room": "Ванная",
+      "online": true,
+      "capabilities": [
+        {
+          "key": "total",
+          "label": "Расход",
+          "type": "number",
+          "role": "measurement",
+          "unit": "м³",
+          "min": 0.0,
+          "max": null,
+          "default": 124.32
+        },
+        {
+          "key": "flow",
+          "label": "Текущий поток",
+          "type": "number",
+          "role": "measurement",
+          "unit": "м³/ч",
+          "min": 0.0,
+          "max": 50.0,
+          "default": 0.12
+        }
+      ],
+      "state": {
+        "total": 124.32,
+        "flow": 0.12
+      },
+      "ujin": {
+        "serialnumber": "",
+        "ext_guid": "",
+        "model": "parkcloud_device",
+        "device_class": "integrations_devices",
+        "signal_map": {}
+      },
+      "location": {
+        "building_id": "building-1",
+        "entrance": "1",
+        "apartment": "3007",
+        "floor": null,
+        "scope": "apartment"
+      },
+      "common_access": {
+        "resident_read": true,
+        "resident_commands": []
+      },
+      "meter": {
+        "type": "cold_water",
+        "unit": "м³",
+        "manual_allowed": true,
+        "stale_after_hours": 48.0,
+        "max_daily_usage": 5.0
+      },
+      "last_seen": null,
+      "last_seen_source": null
+    },
+    {
+      "id": "fire-1",
+      "name": "Датчик дыма",
+      "kind": "fire",
+      "room": "Кухня",
+      "online": true,
+      "capabilities": [
+        {
+          "key": "smoke",
+          "label": "Дым обнаружен",
+          "type": "boolean",
+          "role": "event",
+          "unit": "",
+          "min": null,
+          "max": null,
+          "default": false
+        },
+        {
+          "key": "battery",
+          "label": "Батарея",
+          "type": "number",
+          "role": "measurement",
+          "unit": "%",
+          "min": 0.0,
+          "max": 100.0,
+          "default": 100
+        }
+      ],
+      "state": {
+        "smoke": false,
+        "battery": 100
+      },
+      "ujin": {
+        "serialnumber": "",
+        "ext_guid": "",
+        "model": "parkcloud_device",
+        "device_class": "integrations_devices",
+        "signal_map": {}
+      },
+      "location": {
+        "building_id": "building-1",
+        "entrance": "1",
+        "apartment": "3007",
+        "floor": null,
+        "scope": "apartment"
+      },
+      "common_access": {
+        "resident_read": true,
+        "resident_commands": []
+      },
+      "meter": null,
+      "last_seen": null,
+      "last_seen_source": null
+    },
+    {
+      "id": "ventilation-1",
+      "name": "Вентиляция",
+      "kind": "ventilation",
+      "room": "Гостиная",
+      "online": true,
+      "capabilities": [
+        {
+          "key": "power",
+          "label": "Питание",
+          "type": "boolean",
+          "role": "command",
+          "unit": "",
+          "min": null,
+          "max": null,
+          "default": true
+        },
+        {
+          "key": "speed",
+          "label": "Скорость",
+          "type": "number",
+          "role": "property",
+          "unit": "",
+          "min": 0.0,
+          "max": 3.0,
+          "default": 1
+        },
+        {
+          "key": "co2",
+          "label": "CO₂",
+          "type": "number",
+          "role": "measurement",
+          "unit": "ppm",
+          "min": 0.0,
+          "max": 10000.0,
+          "default": 580
+        }
+      ],
+      "state": {
+        "power": true,
+        "speed": 1,
+        "co2": 580
+      },
+      "ujin": {
+        "serialnumber": "",
+        "ext_guid": "",
+        "model": "parkcloud_device",
+        "device_class": "integrations_devices",
+        "signal_map": {}
+      },
+      "location": {
+        "building_id": "building-1",
+        "entrance": "1",
+        "apartment": "3007",
+        "floor": null,
+        "scope": "apartment"
+      },
+      "common_access": {
+        "resident_read": true,
+        "resident_commands": []
+      },
+      "meter": null,
+      "last_seen": null,
+      "last_seen_source": null
+    },
+    {
+      "id": "elevator-1",
+      "name": "Лифт",
+      "kind": "elevator",
+      "room": "Подъезд",
+      "online": true,
+      "capabilities": [
+        {
+          "key": "floor",
+          "label": "Этаж назначения",
+          "type": "number",
+          "role": "command",
+          "unit": "",
+          "min": 1.0,
+          "max": 25.0,
+          "default": 1
+        },
+        {
+          "key": "evacuation",
+          "label": "Пожарный режим",
+          "type": "boolean",
+          "role": "command",
+          "unit": "",
+          "min": null,
+          "max": null,
+          "default": false
+        },
+        {
+          "key": "door_open",
+          "label": "Двери открыты",
+          "type": "boolean",
+          "role": "event",
+          "unit": "",
+          "min": null,
+          "max": null,
+          "default": false
+        }
+      ],
+      "state": {
+        "floor": 1,
+        "evacuation": false,
+        "door_open": false
+      },
+      "ujin": {
+        "serialnumber": "",
+        "ext_guid": "",
+        "model": "parkcloud_device",
+        "device_class": "integrations_devices",
+        "signal_map": {}
+      },
+      "location": {
+        "building_id": "building-1",
+        "entrance": "1",
+        "apartment": "",
+        "floor": null,
+        "scope": "common"
+      },
+      "common_access": {
+        "resident_read": true,
+        "resident_commands": [
+          "floor"
+        ]
+      },
+      "meter": null,
+      "last_seen": null,
+      "last_seen_source": null
+    },
+    {
+      "id": "lock-1",
+      "name": "Умный замок",
+      "kind": "lock",
+      "room": "Прихожая",
+      "online": true,
+      "capabilities": [
+        {
+          "key": "locked",
+          "label": "Закрыт",
+          "type": "boolean",
+          "role": "command",
+          "unit": "",
+          "min": null,
+          "max": null,
+          "default": true
+        },
+        {
+          "key": "access",
+          "label": "Доступ разрешён",
+          "type": "boolean",
+          "role": "event",
+          "unit": "",
+          "min": null,
+          "max": null,
+          "default": false
+        }
+      ],
+      "state": {
+        "locked": true,
+        "access": false
+      },
+      "ujin": {
+        "serialnumber": "",
+        "ext_guid": "",
+        "model": "parkcloud_device",
+        "device_class": "integrations_devices",
+        "signal_map": {}
+      },
+      "location": {
+        "building_id": "building-1",
+        "entrance": "1",
+        "apartment": "3007",
+        "floor": null,
+        "scope": "apartment"
+      },
+      "common_access": {
+        "resident_read": true,
+        "resident_commands": []
+      },
+      "meter": null,
+      "last_seen": null,
+      "last_seen_source": null
+    },
+    {
+      "id": "camera-1",
+      "name": "Камера входа",
+      "kind": "camera",
+      "room": "Прихожая",
+      "online": true,
+      "capabilities": [
+        {
+          "key": "motion",
+          "label": "Движение",
+          "type": "boolean",
+          "role": "event",
+          "unit": "",
+          "min": null,
+          "max": null,
+          "default": false
+        },
+        {
+          "key": "recording",
+          "label": "Запись",
+          "type": "boolean",
+          "role": "command",
+          "unit": "",
+          "min": null,
+          "max": null,
+          "default": false
+        }
+      ],
+      "state": {
+        "motion": false,
+        "recording": false
+      },
+      "ujin": {
+        "serialnumber": "",
+        "ext_guid": "",
+        "model": "parkcloud_device",
+        "device_class": "integrations_devices",
+        "signal_map": {}
+      },
+      "location": {
+        "building_id": "building-1",
+        "entrance": "1",
+        "apartment": "3007",
+        "floor": null,
+        "scope": "apartment"
+      },
+      "common_access": {
+        "resident_read": true,
+        "resident_commands": []
+      },
+      "meter": null,
+      "last_seen": null,
+      "last_seen_source": null
+    },
+    {
+      "id": "intercom-1",
+      "name": "Домофон подъезда · эмулятор",
+      "kind": "intercom",
+      "room": "Входная группа",
+      "online": true,
+      "capabilities": [
+        {
+          "key": "door_open",
+          "label": "Открыть дверь",
+          "type": "boolean",
+          "role": "command",
+          "unit": "",
+          "min": null,
+          "max": null,
+          "default": false
+        },
+        {
+          "key": "call",
+          "label": "Вызов домофона",
+          "type": "boolean",
+          "role": "event",
+          "unit": "",
+          "min": null,
+          "max": null,
+          "default": false
+        }
+      ],
+      "state": {
+        "door_open": false,
+        "call": false
+      },
+      "ujin": {
+        "serialnumber": "",
+        "ext_guid": "",
+        "model": "parkcloud_device",
+        "device_class": "integrations_devices",
+        "signal_map": {}
+      },
+      "location": {
+        "building_id": "building-1",
+        "entrance": "1",
+        "apartment": "",
+        "floor": null,
+        "scope": "common"
+      },
+      "common_access": {
+        "resident_read": true,
+        "resident_commands": [
+          "door_open"
+        ]
+      },
+      "meter": null,
+      "last_seen": null,
+      "last_seen_source": null
+    },
+    {
+      "id": "common-camera-1",
+      "name": "Камера подъезда · эмулятор",
+      "kind": "camera",
+      "room": "Входная группа",
+      "online": true,
+      "capabilities": [
+        {
+          "key": "motion",
+          "label": "Движение",
+          "type": "boolean",
+          "role": "event",
+          "unit": "",
+          "min": null,
+          "max": null,
+          "default": false
+        },
+        {
+          "key": "recording",
+          "label": "Запись",
+          "type": "boolean",
+          "role": "command",
+          "unit": "",
+          "min": null,
+          "max": null,
+          "default": false
+        }
+      ],
+      "state": {
+        "motion": false,
+        "recording": false
+      },
+      "ujin": {
+        "serialnumber": "",
+        "ext_guid": "",
+        "model": "parkcloud_device",
+        "device_class": "integrations_devices",
+        "signal_map": {}
+      },
+      "location": {
+        "building_id": "building-1",
+        "entrance": "1",
+        "apartment": "",
+        "floor": null,
+        "scope": "common"
+      },
+      "common_access": {
+        "resident_read": true,
+        "resident_commands": []
+      },
+      "meter": null,
+      "last_seen": null,
+      "last_seen_source": null
+    },
+    {
+      "id": "corridor-meter-1",
+      "name": "Счётчик освещения этажа",
+      "kind": "meter",
+      "room": "Коридор",
+      "online": true,
+      "capabilities": [
+        {
+          "key": "total",
+          "label": "Потребление",
+          "type": "number",
+          "role": "measurement",
+          "unit": "кВт·ч",
+          "min": 0.0,
+          "max": null,
+          "default": 530.4
+        },
+        {
+          "key": "power",
+          "label": "Мощность",
+          "type": "number",
+          "role": "measurement",
+          "unit": "кВт",
+          "min": 0.0,
+          "max": 100.0,
+          "default": 0.15
+        }
+      ],
+      "state": {
+        "total": 530.4,
+        "power": 0.15
+      },
+      "ujin": {
+        "serialnumber": "",
+        "ext_guid": "",
+        "model": "parkcloud_device",
+        "device_class": "integrations_devices",
+        "signal_map": {}
+      },
+      "location": {
+        "building_id": "building-1",
+        "entrance": "1",
+        "apartment": "",
+        "floor": null,
+        "scope": "common"
+      },
+      "common_access": {
+        "resident_read": true,
+        "resident_commands": []
+      },
+      "meter": {
+        "type": "electricity",
+        "unit": "кВт·ч",
+        "manual_allowed": false,
+        "stale_after_hours": 48.0,
+        "max_daily_usage": 100.0
+      },
+      "last_seen": null,
+      "last_seen_source": null
+    },
+    {
+      "id": "hot-water-meter-1",
+      "name": "Счётчик горячей воды",
+      "kind": "meter",
+      "room": "Щит учёта",
+      "online": true,
+      "capabilities": [
+        {
+          "key": "total",
+          "label": "Показание",
+          "type": "number",
+          "role": "measurement",
+          "unit": "м³",
+          "min": 0.0,
+          "max": null,
+          "default": 86.15
+        }
+      ],
+      "state": {
+        "total": 86.15
+      },
+      "ujin": {
+        "serialnumber": "",
+        "ext_guid": "",
+        "model": "parkcloud_device",
+        "device_class": "integrations_devices",
+        "signal_map": {}
+      },
+      "location": {
+        "building_id": "building-1",
+        "entrance": "1",
+        "apartment": "3007",
+        "floor": null,
+        "scope": "apartment"
+      },
+      "common_access": {
+        "resident_read": true,
+        "resident_commands": []
+      },
+      "meter": {
+        "type": "hot_water",
+        "unit": "м³",
+        "manual_allowed": true,
+        "stale_after_hours": 48.0,
+        "max_daily_usage": 5.0
+      },
+      "last_seen": null,
+      "last_seen_source": null
+    },
+    {
+      "id": "electricity-meter-1",
+      "name": "Счётчик электроэнергии",
+      "kind": "meter",
+      "room": "Щит учёта",
+      "online": true,
+      "capabilities": [
+        {
+          "key": "total",
+          "label": "Показание",
+          "type": "number",
+          "role": "measurement",
+          "unit": "кВт·ч",
+          "min": 0.0,
+          "max": null,
+          "default": 2840.2
+        }
+      ],
+      "state": {
+        "total": 2840.2
+      },
+      "ujin": {
+        "serialnumber": "",
+        "ext_guid": "",
+        "model": "parkcloud_device",
+        "device_class": "integrations_devices",
+        "signal_map": {}
+      },
+      "location": {
+        "building_id": "building-1",
+        "entrance": "1",
+        "apartment": "3007",
+        "floor": null,
+        "scope": "apartment"
+      },
+      "common_access": {
+        "resident_read": true,
+        "resident_commands": []
+      },
+      "meter": {
+        "type": "electricity",
+        "unit": "кВт·ч",
+        "manual_allowed": true,
+        "stale_after_hours": 48.0,
+        "max_daily_usage": 100.0
+      },
+      "last_seen": null,
+      "last_seen_source": null
+    },
+    {
+      "id": "heating-meter-1",
+      "name": "Счётчик отопления",
+      "kind": "meter",
+      "room": "Щит учёта",
+      "online": true,
+      "capabilities": [
+        {
+          "key": "total",
+          "label": "Показание",
+          "type": "number",
+          "role": "measurement",
+          "unit": "Гкал",
+          "min": 0.0,
+          "max": null,
+          "default": 18.42
+        }
+      ],
+      "state": {
+        "total": 18.42
+      },
+      "ujin": {
+        "serialnumber": "",
+        "ext_guid": "",
+        "model": "parkcloud_device",
+        "device_class": "integrations_devices",
+        "signal_map": {}
+      },
+      "location": {
+        "building_id": "building-1",
+        "entrance": "1",
+        "apartment": "3007",
+        "floor": null,
+        "scope": "apartment"
+      },
+      "common_access": {
+        "resident_read": true,
+        "resident_commands": []
+      },
+      "meter": {
+        "type": "heating",
+        "unit": "Гкал",
+        "manual_allowed": true,
+        "stale_after_hours": 48.0,
+        "max_daily_usage": 1.0
+      },
+      "last_seen": null,
+      "last_seen_source": null
+    }
+  ],
+  "rules": [
+    {
+      "id": "rule-leak",
+      "name": "Защита от протечки",
+      "description": "Перекрыть воду и оповестить консьержа и жителя",
+      "enabled": true,
+      "trigger": {
+        "device_id": "leak-1",
+        "signal": "leak",
+        "operator": "eq",
+        "value": true
+      },
+      "conditions": [],
+      "condition_mode": "all",
+      "actions": [
+        {
+          "type": "command",
+          "device_id": "valve-1",
+          "signal": "closed",
+          "value": true,
+          "target": "resident",
+          "message": "",
+          "seconds": 0
+        },
+        {
+          "type": "notification",
+          "device_id": null,
+          "signal": null,
+          "value": null,
+          "target": "concierge",
+          "message": "Обнаружена протечка в квартире. Проверьте расположение датчика и свяжитесь с жителем.",
+          "seconds": 0
+        },
+        {
+          "type": "notification",
+          "device_id": null,
+          "signal": null,
+          "value": null,
+          "target": "resident",
+          "message": "Обнаружена протечка в ванной. Проверьте состояние клапана в приложении.",
+          "seconds": 0
+        }
+      ],
+      "cooldown_seconds": 3.0,
+      "on_error": "continue",
+      "retries": 1,
+      "owner_id": null
+    },
+    {
+      "id": "rule-climate",
+      "name": "Комфортный климат",
+      "description": "При температуре выше 26 °C включить охлаждение и вентиляцию",
+      "enabled": true,
+      "trigger": {
+        "device_id": "thermostat-1",
+        "signal": "temperature",
+        "operator": "gt",
+        "value": 26
+      },
+      "conditions": [],
+      "condition_mode": "all",
+      "actions": [
+        {
+          "type": "command",
+          "device_id": "thermostat-1",
+          "signal": "mode",
+          "value": "cool",
+          "target": "resident",
+          "message": "",
+          "seconds": 0
+        },
+        {
+          "type": "command",
+          "device_id": "thermostat-1",
+          "signal": "target_temp",
+          "value": 22,
+          "target": "resident",
+          "message": "",
+          "seconds": 0
+        },
+        {
+          "type": "command",
+          "device_id": "ventilation-1",
+          "signal": "speed",
+          "value": 3,
+          "target": "resident",
+          "message": "",
+          "seconds": 0
+        },
+        {
+          "type": "notification",
+          "device_id": null,
+          "signal": null,
+          "value": null,
+          "target": "resident",
+          "message": "В комнате жарко. Включено охлаждение до 22 °C.",
+          "seconds": 0
+        }
+      ],
+      "cooldown_seconds": 3.0,
+      "on_error": "continue",
+      "retries": 1,
+      "owner_id": null
+    },
+    {
+      "id": "rule-fire",
+      "name": "Пожарная безопасность · демонстрация",
+      "description": "Модель учебного сценария: отключение вентиляции, лифт на первый этаж, оповещения",
+      "enabled": true,
+      "trigger": {
+        "device_id": "fire-1",
+        "signal": "smoke",
+        "operator": "eq",
+        "value": true
+      },
+      "conditions": [],
+      "condition_mode": "all",
+      "actions": [
+        {
+          "type": "command",
+          "device_id": "ventilation-1",
+          "signal": "power",
+          "value": false,
+          "target": "resident",
+          "message": "",
+          "seconds": 0
+        },
+        {
+          "type": "command",
+          "device_id": "elevator-1",
+          "signal": "evacuation",
+          "value": true,
+          "target": "resident",
+          "message": "",
+          "seconds": 0
+        },
+        {
+          "type": "command",
+          "device_id": "elevator-1",
+          "signal": "floor",
+          "value": 1,
+          "target": "resident",
+          "message": "",
+          "seconds": 0
+        },
+        {
+          "type": "notification",
+          "device_id": null,
+          "signal": null,
+          "value": null,
+          "target": "concierge",
+          "message": "Учебная тревога: датчик дыма на кухне. Требуется проверка.",
+          "seconds": 0
+        },
+        {
+          "type": "notification",
+          "device_id": null,
+          "signal": null,
+          "value": null,
+          "target": "resident",
+          "message": "Учебная тревога: обнаружен дым. Проверьте обстановку.",
+          "seconds": 0
+        }
+      ],
+      "cooldown_seconds": 3.0,
+      "on_error": "continue",
+      "retries": 1,
+      "owner_id": null
+    }
+  ],
+  "organizations": [
+    {
+      "id": "organization-1",
+      "name": "УК MicroTurtles"
+    }
+  ],
+  "complexes": [
+    {
+      "id": "complex-1",
+      "name": "Жилой комплекс — название не указано",
+      "organization_id": "organization-1"
+    }
+  ],
+  "buildings": [
+    {
+      "id": "building-1",
+      "name": "Дом MicroTurtles",
+      "address": "г. Пермь, шоссе Космонавтов, 111д",
+      "organization_id": "organization-1",
+      "complex_id": "complex-1",
+      "entrances": [
+        {
+          "number": "1",
+          "name": "Подъезд 1 (уточнить)",
+          "apartments": [
+            {
+              "number": "3007",
+              "floor": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
